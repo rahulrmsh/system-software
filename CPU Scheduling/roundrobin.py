@@ -2,6 +2,7 @@ from prettytable import PrettyTable
 
 processList = []
 n = 0
+timeToken = 0
 quantum = 0
 burstList = []
 copyBurstList = []
@@ -24,18 +25,18 @@ def inputCycle():
         copyBurstList.append(burstList[i])
 
 def timeManager(indexKey):
+    global timeToken
     global copyBurstList
     global turnAroundTimeList
     global waitingList
     if(copyBurstList[indexKey] > quantum):
-        turnAroundTimeList[indexKey] = turnAroundTimeList[indexKey] + quantum
+        timeToken = timeToken + quantum
         copyBurstList[indexKey] = copyBurstList[indexKey] - quantum
     else:
-        turnAroundTimeList[indexKey] = turnAroundTimeList[indexKey] + copyBurstList[indexKey]
-        waitingList[indexKey] = turnAroundTimeList[indexKey] - copyBurstList[indexKey]
+        timeToken = timeToken + copyBurstList[indexKey]
+        waitingList[indexKey] = timeToken - burstList[indexKey]
         copyBurstList[indexKey] = 0
         turnAroundTimeList[indexKey] = waitingList[indexKey]+burstList[indexKey]
-
 
 def roundRobin():
     while(sum(copyBurstList) != 0):
