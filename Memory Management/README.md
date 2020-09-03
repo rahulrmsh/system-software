@@ -6,5 +6,5 @@
 
 | Single Level | Two Level | Hierarchical |
 | --- | --- | --- | 
-| ![Single Level](images/screens1.png) | ![Two Level](images/screens1.png) | ![Hierarchical](images/screens1.png) |
+| ![Single Level](images/screens1.png) | ![Two Level](images/peek2.webm) | ![Hierarchical](images/screens1.png) |
 | ![Single Level](images/screens2.png) | ![Two Level](images/screens1.png) | ![Hierarchical](images/screens1.png) |
