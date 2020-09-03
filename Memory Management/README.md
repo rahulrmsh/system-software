@@ -5,7 +5,7 @@
 - [Hierarchical](https://github.com/rahulrmsh/system-software/blob/master/CPU%20Scheduling/priority.py)
 
 | Single Level |
-| --- |
+| --- | --- |
 | ![Single Level](images/screens1.png) | ![Single Level](images/screens2.png) |
 
 | Two Level |
