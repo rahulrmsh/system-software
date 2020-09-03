@@ -20,7 +20,6 @@ while(responseCode < 5 and responseCode > 0):
                     print('|\n|\033[92m File Created\033[0m')
             elif(len(locationId) == 2):
                 if(locationId[1] in subFileName):
-                    print("Infile")
                     try:
                         subFileName[locationId[1]].index(fileId)
                         print('|\n|\033[93m File Name Already Exits. Try Again\033[0m')
