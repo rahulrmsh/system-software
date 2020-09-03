@@ -33,7 +33,7 @@ while(responseCode < 5 and responseCode > 0):
             else:
                 subFileName[locationId[i]] = [fileId]
                 print('|\n|\033[92m File Created\033[0m')
-            print(subDirName, subFileName)
         else:
             print('|\n|\033[93m Wrong Core Directory Name. Try Again\033[0m')
+print("| Directories : {}\n| Files : {}".format(subDirName, subFileName))
 print("|\n| Thank You. Bye")
