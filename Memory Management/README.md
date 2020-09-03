@@ -2,7 +2,7 @@
 
 - [Single Level](https://github.com/rahulrmsh/system-software/blob/master/Memory%20Management/singlelevel.py)
 - [Two Level](https://github.com/rahulrmsh/system-software/blob/master/Memory%20Management/twoLevel.py)
-- [Hierarchical](https://github.com/rahulrmsh/system-software/blob/master/CPU%20Scheduling/priority.py)
+- [Hierarchical](https://github.com/rahulrmsh/system-software/blob/master/Memory%20Management/hierarchical.py)
 
 | Single |  Level |
 | --- | --- |
@@ -14,4 +14,4 @@
 
 | Hierarchical |
 | --- |
-| ![Single Level](images/screens1.png) | ![Single Level](images/screens2.png) |
+| ![Single Level](images/screens1.png) | ![Single Level](images/screens2.png)
