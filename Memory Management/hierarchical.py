@@ -2,8 +2,10 @@ dirName = input("| Enter Core Directory Name : ")
 print('|\n|\033[92m Core Directory Created\033[0m')
 subFileName = {}
 subDirName = {}
+fileListKey = [dir]
+finalList = '.'
 responseCode = 1
-while(responseCode < 5 and responseCode > 0):
+while(responseCode < 3 and responseCode > 0):
     print('|\n| Operations\n|\n| 1.Create File\n| 2.View All Files\n| 3.Exit\n|')
     responseCode = int(input('| Enter Response : '))
     if(responseCode == 1):
@@ -35,5 +37,6 @@ while(responseCode < 5 and responseCode > 0):
                 print('|\n|\033[92m File Created\033[0m')
         else:
             print('|\n|\033[93m Wrong Core Directory Name. Try Again\033[0m')
-print("| Directories : {}\n| Files : {}".format(subDirName, subFileName))
+    if(responseCode == 2):
+        print("| Directories : {}\n| Files : {}".format(subDirName, subFileName))
 print("|\n| Thank You. Bye")
