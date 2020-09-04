@@ -14,4 +14,4 @@
 
 | Hierarchical |
 | --- |
-| ![Single Level](images/screens1.png) | ![Single Level](images/screens2.png)
+| ![Single Level](images/hierarchical.png) |
