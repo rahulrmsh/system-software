@@ -15,6 +15,11 @@ def eat(x):
     else:
         print("| {} should wait\n".format(x));
     
+def think(x):
+    state[x] = Condition.Thinking;
+    eat((x-1)%5);
+    eat((x+4)%5);
+    print("| {} stopped eating.".format(x));
 
 int(input("Enter number of philosophers: "))
 for i in range(n):
