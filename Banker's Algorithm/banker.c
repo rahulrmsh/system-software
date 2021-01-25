@@ -27,17 +27,6 @@ int main(){
         }
         printf("\n");
     }
-    printf("Allocated\t\t|Maximum\t\t\t\n");
-    for (i = 0; i < n; i++){
-        for (j = 0; j < m; j++){
-            printf("%d\t",alloc[i][j]);
-        }
-        printf("|");
-        for (j = 0; j < m; j++){
-            printf("%d\t",max[i][j]);
-        }
-        printf("\n");
-    }
     printf("\n");
     printf("Enter available resources \n");
     for (j = 0; j < m; j++){
@@ -50,6 +39,21 @@ int main(){
         for (j = 0;j<m;j++){
             need[i][j] = max[i][j] - alloc[i][j];
         }
+    }
+    printf("\tAllocated\t|\tMaximum \t|\tNeed\n");
+    for (i = 0; i < n; i++){
+        for (j = 0; j < m; j++){
+            printf("%d\t",alloc[i][j]);
+        }
+        printf("|");
+        for (j = 0; j < m; j++){
+            printf("%d\t",max[i][j]);
+        }
+        printf("|");
+        for (j = 0; j < m; j++){
+            printf("%d\t",need[i][j]);
+        }
+        printf("\n");
     }
     i = 0;
     while(1){
@@ -76,9 +80,10 @@ int main(){
         }        
 
     }
+    printf("\nFollowing is the SAFE Sequence\n"); 
     for(i = 0; i< n-1;i++){
         printf("P%d->\t",ans[i]);
     }
-    printf("P%d\n", ans[n]);
+    printf("P%d\n", ans[n+1]);
     return (0);
 }
