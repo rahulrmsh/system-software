@@ -29,4 +29,30 @@ void consume(int a){
     empty = signal(empty);
 }
 int main(){
+    while (1)
+    {
+        printf("\n1.Produce \n2.Consume \n3.Exit");
+        printf("\nenter choice");
+        scanf("%d", &op);
+        if (op == 1)
+        {
+            if ((s == 1) && (empty != 0))
+                produce();
+            else
+            {
+                printf("\nBuffer is full");
+            }
+        }
+        else if (op == 2)
+        {
+            if ((s == 1) && (full != 0))
+                consume();
+            else
+            {
+                printf("\nbuffer is empty");
+            }
+        }
+        else if (op == 3)
+            exit(0);
+    }
 }
