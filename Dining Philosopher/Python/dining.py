@@ -16,4 +16,4 @@ while(1):
     elif res > 3:
         print("|\n| WRONG INPUT\n|\n");
         continue;
-    id = int(input("| Choose from below : \n|1. Start Eating\n|2. Stop Eating\n|3. Exit\n| Enter Response : "))
+    id = int(input("| Enter philosopher id : "))
