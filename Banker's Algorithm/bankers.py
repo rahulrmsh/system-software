@@ -7,6 +7,8 @@ alloc = []
 maximum = []
 avail = []
 need = []
+for i in range(n):
+    n.append([])
 ans = []
 flag = []
 for i in range(n):
@@ -30,4 +32,12 @@ while(1):
             ans.append(i)
             for j in range(m):
                 avail[j] = avail[j] + alloc[i][j]
-            
+        if i < n:
+            i += 1
+        else:
+            i = 0
+        if len(ans) == n:
+            break
+for i in range(len(ans) - 1):
+    print("P{}->\t".format(ans[i]))
+print("P{}".format(ans[n]))
