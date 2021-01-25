@@ -32,5 +32,11 @@ int main(){
         }
         printf("\n");
     }
+    for (i = 0; i < n; i++){
+        printf("\n");
+        for (j = 0; j < m; j++){
+            printf("%d\t",max[i][j]);
+        }
+    }
     return (0);
 }
