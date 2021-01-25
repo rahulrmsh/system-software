@@ -11,18 +11,16 @@ enum {
     EATING
 } state[5];
 
-int i, flag[5], n, key;
+int i, n, key;
 void initialize(){
     for(i = 0; i < 5; i++){
         state[i] = THINKING;
-        flag[i] = 0;
     }
 }
 void eat(int x){
     state[x] = HUNGRY;
     if(state[(x + 4) % 5] == THINKING && state[(x - 1) % 5] == THINKING && state[x] == HUNGRY){
         state[x] = EATING;
-        flag[x] = 1;
         printf("| %d is now eating.\n",x );
     }else{
         printf("| %d should wait\n",x );
@@ -30,7 +28,6 @@ void eat(int x){
 }
 void think(int x){
     state[x] = THINKING;
-    flag[x] = 0;
     eat((x-1)%5);
     eat((x+4)%5);
     printf("| %d stopped eating.",x );
