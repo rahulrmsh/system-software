@@ -1,4 +1,4 @@
-// Dining Philosopher
+// Dining Philosopher - C Language
 
 #include<stdlib.h>
 #include<stdio.h>
