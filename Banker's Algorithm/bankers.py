@@ -23,15 +23,6 @@ for i in range(n):
     for j in range(m):
         need[i].append(maximum[i][j] - alloc[i][j])
 i = 0
-print(avail)
-print(len(avail))
-print(alloc)
-print(len(alloc))
-print(maximum)
-print(len(maximum))
-print(need)
-print(len(need))
-print(*need)
 while(1 and len(ans) < n):
     try:
         if(flag[i] == 0):
@@ -56,4 +47,4 @@ while(1 and len(ans) < n):
         break
 for i in range(len(ans)-1):
     print("P{}->\t".format(ans[i]))
-# print("P{}".format(ans[i+1]))
+print("P{}".format(ans[i+1]))
