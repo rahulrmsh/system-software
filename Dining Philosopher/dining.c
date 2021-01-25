@@ -28,17 +28,24 @@ void eat(int x){
         printf("| %d should wait",x );
     }
 }
+void think(int x){
+    
+}
 int main(){
     initialize();
-    printf("| Choose from below : \n|1. Start Eating\n|2. Stop Eating\n|3. Exit\n| Enter Response : ");
-    scanf("%d", &n);
-    printf("| Enter philosopher id : ");
-    scanf("%d", &key);
-    if(n == 3){
-        exit(0);
-    }
-    else if(n == 1){
-        eat(key);
+    while(1){
+        printf("| Choose from below : \n|1. Start Eating\n|2. Stop Eating\n|3. Exit\n| Enter Response : ");
+        scanf("%d", &n);
+        printf("| Enter philosopher id : ");
+        scanf("%d", &key);
+        if(n == 3){
+            exit(0);
+        }
+        else if(n == 1){
+            eat(key);
+        }else if(n == 2){
+
+        }
     }
     return 0;
 }
