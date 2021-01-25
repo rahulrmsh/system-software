@@ -12,11 +12,11 @@ for i in range(n):
 ans = []
 flag = []
 for i in range(n):
-    alloc.append(list(map(int, input("Enter allocated resource for process {} : ".format(i+1)).split())))
+    alloc.append(list(map(int, input("Enter allocated resource for process {} : ".format(i+1)).split(','))))
     flag.append(0)
 for i in range(n):
-    maximum.append(list(map(int, input("Enter maximum resource for process {} : ".format(i+1)).split())))
-counter =  input("Enter available resource : ").split()
+    maximum.append(list(map(int, input("Enter maximum resource for process {} : ".format(i+1)).split(','))))
+counter =  input("Enter available resource : ").split(',')
 for i in counter:
     avail.append(int(i))
 for i in range(n):
