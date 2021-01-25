@@ -49,7 +49,7 @@ int main(){
                 consume();
             else
             {
-                printf("\nbuffer is empty");
+                printf("\nBuffer is empty");
             }
         }
         else if (op == 3)
