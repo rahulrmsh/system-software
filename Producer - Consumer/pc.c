@@ -24,7 +24,7 @@ void consume(){
     full = wait(full);
     s = wait(s);
     printf("\nConsumer consumed 1 item, remaining : %d\n", y);
-    y = (y - 1) % 5;
+    y = (y + 1) % 5;
     s = signal(s);
     empty = signal(empty);
 }
