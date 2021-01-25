@@ -11,9 +11,9 @@ def eat(x):
     state[x] = Condition.Hungry;
     if(state[(x + 4) % 5] == Condition.Thinking and state[(x - 1) % 5] == Condition.Thinking and state[x] == Condition.Hungry):
         state[x] = Condition.Eating;
-        print("| {} is now eating.\n",x );
+        print("| {} is now eating.\n".format(x));
     else:
-        print("| {} should wait\n",x );
+        print("| {} should wait\n".format(x));
     
 
 int(input("Enter number of philosophers: "))
