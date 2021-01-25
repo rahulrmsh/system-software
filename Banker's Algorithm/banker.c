@@ -73,5 +73,8 @@ int main(){
         else{i = 0;}           
 
     }
+    for(i = 0; i< n;i++){
+        printf("%d\t",ans[i]);
+    }
     return (0);
 }
