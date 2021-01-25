@@ -27,14 +27,16 @@ int main(){
         }
         printf("\n");
     }
-    printf("Allocated\t\t\tMaximum\t\t\t\n");
+    printf("Allocated\t\t|Maximum\t\t\t\n");
     for (i = 0; i < n; i++){
         for (j = 0; j < m; j++){
             printf("%d\t",alloc[i][j]);
         }
+        printf("|");
         for (j = 0; j < m; j++){
             printf("%d\t",max[i][j]);
         }
+        printf("\n");
     }
     printf("\n");
     return (0);
