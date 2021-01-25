@@ -11,6 +11,10 @@ enum {
     EATING
 } state[5];
 
+void initialize(){
+
+}
 int main(){
     initialize();
+    return 0;
 }
