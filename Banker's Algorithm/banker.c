@@ -8,7 +8,7 @@ int main(){
     scanf("%d",&n);
     printf("Enter number of resources : ");
     scanf("%d",&m);
-    int alloc[n][m], max[n][m], need[n][m], avail[m];
+    int alloc[n][m], max[n][m], need[n][m], avail[m], flag[n];
     for (i = 0; i < n; i++){
         printf("Enter allocated resource for process %d : \n", i+1);
         for (j = 0; j < m; j++){
@@ -42,8 +42,14 @@ int main(){
     printf("Enter available resources \n");
     for (j = 0; j < m; j++){
         printf("Enter %d resources : ",j+1);
-        scanf("%d",&avail[i][j]);
+        scanf("%d",&avail[j]);
     }
     printf("\n");
+    for (i = 0; i < n; i++){
+        flag[i] = 0;
+        for (j = 0;j<m;j++){
+            need[i][j] = max[i][j] - alloc[i][j];
+        }
+    }
     return (0);
 }
