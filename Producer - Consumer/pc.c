@@ -15,7 +15,12 @@ int signal(int a){
 void produce(){
     empty = wait(empty);
     s = wait(s);
-    x = (x+1)%5;
+    x = (x + 1) % 5;
+    printf("Producer produced item : %d", x);
+    s = signal(s);
+    empty = signal(s);
+}
+void consume(int a){
     
 }
 int main(){
