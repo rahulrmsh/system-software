@@ -76,8 +76,9 @@ int main(){
         }        
 
     }
-    for(i = 0; i< n;i++){
-        printf("%d\t",ans[i]);
+    for(i = 0; i< n-1;i++){
+        printf("P%d->\t",ans[i]);
     }
+    printf("P%d\n", ans[n]);
     return (0);
 }
