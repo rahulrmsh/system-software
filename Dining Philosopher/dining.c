@@ -29,7 +29,10 @@ void eat(int x){
     }
 }
 void think(int x){
-    
+    state[x] = THINKING;
+    flag[x] = 0;
+    eat(x-1%5);
+    eat(x+4%5);
 }
 int main(){
     initialize();
