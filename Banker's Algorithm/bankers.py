@@ -33,7 +33,6 @@ print(need)
 print(len(need))
 print(*need)
 while(1 and len(ans) < n):
-    print(ans)
     try:
         if(flag[i] == 0):
             log = 0
@@ -55,6 +54,6 @@ while(1 and len(ans) < n):
     except :
         print(i)
         break
-for i in range(len(ans)):
+for i in range(len(ans)-1):
     print("P{}->\t".format(ans[i]))
 # print("P{}".format(ans[i+1]))
