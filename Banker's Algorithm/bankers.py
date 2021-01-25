@@ -7,9 +7,7 @@ alloc = []
 maximum = []
 avail = []
 for i in range(n):
-    alloc.append([list(map(int, input("Enter allocated resource for process {} : ".format(i+1)).split()))])
+    alloc.append(list(map(int, input("Enter allocated resource for process {} : ".format(i+1)).split())))
 for i in range(n):
-    maximum.append([list(map(int, input("Enter maximum resource for process {} : ".format(i+1)).split()))])
-avail.append([list(map(int, input("Enter available resource : ").split()))])
-print(avail)
-print(*alloc)
+    maximum.append(list(map(int, input("Enter maximum resource for process {} : ".format(i+1)).split())))
+avail.append(list(map(int, input("Enter available resource : ").split())))
