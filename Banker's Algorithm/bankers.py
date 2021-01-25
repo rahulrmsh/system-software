@@ -8,7 +8,7 @@ maximum = []
 avail = []
 need = []
 for i in range(n):
-    n.append([])
+    need.append([])
 ans = []
 flag = []
 for i in range(n):
@@ -16,28 +16,34 @@ for i in range(n):
     flag.append(0)
 for i in range(n):
     maximum.append(list(map(int, input("Enter maximum resource for process {} : ".format(i+1)).split())))
-avail.append(list(map(int, input("Enter available resource : ").split())))
+counter =  input("Enter available resource : ").split()
+for i in counter:
+    avail.append(int(i))
 for i in range(n):
     for j in range(m):
         need[i].append(maximum[i][j] - alloc[i][j])
 i = 0
+print(*need)
 while(1):
-    if(flag[i] == 0):
-        log = 0
-        for j in range(m):
-            if need[i][j] > avail[j]:
-                log = 1
-                break
-        if log == 0:
-            ans.append(i)
+    try:
+        if(flag[i] == 0):
+            log = 0
             for j in range(m):
-                avail[j] = avail[j] + alloc[i][j]
-        if i < n:
-            i += 1
-        else:
-            i = 0
-        if len(ans) == n:
-            break
+                if need[i][j] > avail[j]:
+                    log = 1
+                    break
+            if log == 0:
+                ans.append(i)
+                for j in range(m):
+                    avail[j] = avail[j] + alloc[i][j]
+            if i < n:
+                i += 1
+            else:
+                i = 0
+            if len(ans) == n:
+                break
+    except :
+        print(i)
 for i in range(len(ans) - 1):
     print("P{}->\t".format(ans[i]))
 print("P{}".format(ans[n]))
