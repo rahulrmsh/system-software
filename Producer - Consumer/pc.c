@@ -20,7 +20,7 @@ void produce(){
     s = signal(s);
     full = signal(full);
 }
-void consume(int a){
+void consume(){
     full = wait(full);
     s = wait(s);
     printf("Consumer consumed item : %d", y);
