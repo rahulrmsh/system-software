@@ -27,8 +27,8 @@ int main(){
         }
         printf("\n");
     }
+    printf("Allocated\t\t\tMaximum\t\t\t\n");
     for (i = 0; i < n; i++){
-        printf("Allocated\t\t\tMaximum\t\t\t");
         for (j = 0; j < m; j++){
             printf("%d\t",alloc[i][j]);
         }
