@@ -21,5 +21,6 @@ void initialize(){
 int main(){
     n = 5;
     initialize();
+    printf("| Choose from below : \n| Start Eating\n| Stop Eating\n| Exit\n| Enter Response : ");
     return 0;
 }
