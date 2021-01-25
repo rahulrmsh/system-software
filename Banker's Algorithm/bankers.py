@@ -45,8 +45,7 @@ while(1 and len(ans) < n):
     except :
         print(i)
         break
-final = []
+print("\nFollowing is the SAFE Sequence\n");
 for i in range(len(ans)-1):
-    final.append('P'+ans[i]+'->\t')
-final.append('P'+ans[i+1])
-print(*final[0])
+    print("P{}->\t".format(ans[i]), end =" ")
+print("P{}".format(ans[i+1]))
