@@ -3,12 +3,11 @@
 #include <stdio.h>
 
 int main(){
-    int n, m, i, j, k;
+    int n, m, i, j, k, alloc[n][m], max[n][m], need[n][m], avail[m], flag[n], ans[n], index = 0;
     printf("Enter number of processes : ");
     scanf("%d",&n);
     printf("Enter number of resources : ");
     scanf("%d",&m);
-    int alloc[n][m], max[n][m], need[n][m], avail[m], flag[n];
     for (i = 0; i < n; i++){
         printf("Enter allocated resource for process %d : \n", i+1);
         for (j = 0; j < m; j++){
@@ -50,6 +49,29 @@ int main(){
         for (j = 0;j<m;j++){
             need[i][j] = max[i][j] - alloc[i][j];
         }
+    }
+    i = 0;
+    
+    while(1){
+        if(flag[i] == 0){
+            int log = 0;
+            for (j = 0; j < m; j++){
+                if(need[i][j] > avail[j]){
+                    log = 1;
+                    break;
+                }
+            }
+            if(log == 0){
+                flag[i] = 1;
+                for (k = 0; k < m; k++){
+                    avail[k] = alloc[i][k] + avail[k];
+                }
+                ans[index++] = i;
+            };
+        }
+        if(i < n){i++;}
+        else{i = 0;}           
+
     }
     return (0);
 }
