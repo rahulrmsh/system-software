@@ -2,7 +2,7 @@
 
 n = int(input("Enter number of processes: "))
 m = int(input("Enter number of resources: "))
-print("Enter resource per processes: \n")
+print("\nEnter resource per processes \n")
 alloc = []
 maximum = []
 avail = []
