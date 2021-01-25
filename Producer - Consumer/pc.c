@@ -16,14 +16,14 @@ void produce(){
     empty = wait(empty);
     s = wait(s);
     x = (x + 1) % 5;
-    printf("Producer produced item : %d", x);
+    printf("\nProducer produced item : %d\n", x);
     s = signal(s);
     full = signal(full);
 }
 void consume(){
     full = wait(full);
     s = wait(s);
-    printf("Consumer consumed item : %d", y);
+    printf("\nConsumer consumed 1 item, remaining : %d\n", y);
     y = (y - 1) % 5;
     s = signal(s);
     empty = signal(empty);
@@ -31,8 +31,8 @@ void consume(){
 int main(){
     while (1)
     {
-        printf("\n1.Produce \n2.Consume \n3.Exit");
-        printf("\nenter choice");
+        printf("\n1.Produce \n2.Consume \n3.Exit\n");
+        printf("\nEnter choice");
         scanf("%d", &op);
         if (op == 1)
         {
