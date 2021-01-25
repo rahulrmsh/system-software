@@ -15,6 +15,7 @@ int main(){
             printf("Enter %d resources : ",j+1);
             scanf("%d",&alloc[i][j]);
         }
+        printf("\n");
     }
     for (i = 0; i < n; i++){
         printf("\n");
@@ -22,5 +23,6 @@ int main(){
             printf("%d\t",alloc[i][j]);
         }
     }
+    printf("\n");
     return (0);
 }
