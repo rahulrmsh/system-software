@@ -18,9 +18,13 @@ void produce(){
     x = (x + 1) % 5;
     printf("Producer produced item : %d", x);
     s = signal(s);
-    empty = signal(s);
+    full = signal(full);
 }
 void consume(int a){
+    full = wait(full);
+    s = wait(s);
+    printf('Consumer consumed item : %d', y);
+    y = (y - 1) % 5;
     
 }
 int main(){
