@@ -29,3 +29,5 @@ while(1):
     id = int(input("| Enter philosopher id : "))
     if res == 1:
         eat(id)
+    elif res == 2:
+        think(2)
