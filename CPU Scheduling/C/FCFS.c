@@ -16,5 +16,5 @@ int main(){
         average = average + burst[i];
     }
     printf("Average %d", average/n);
-    printf('Average %d', average/n);
+    printf("Average %d", average/n);
 }
