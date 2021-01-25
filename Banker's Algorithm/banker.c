@@ -1,0 +1,26 @@
+//  Banker's Algorithm - C Language
+
+#include <stdio.h>
+
+int main(){
+    int n, m, i, j, k;
+    printf("Enter number of processes : ");
+    scanf("%d",&n);
+    printf("Enter number of resources : ");
+    scanf("%d",&m);
+    int alloc[n][m];
+    for (i = 0; i < n; i++){
+        printf("Enter allocated resource per process : ");
+        for (j = 0; j < m; j++){
+            printf("Enter %d resources : ",j+1);
+            scanf("%d",&alloc[i][j]);
+        }
+    }
+    for (i = 0; i < n; i++){
+        printf("Enter allocated resource per process : ");
+        for (j = 0; j < m; j++){
+            printf("Enter %d resources : ",alloc[i][j]);
+        }
+    }
+    return (0);
+}
