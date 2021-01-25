@@ -10,16 +10,16 @@ int main(){
     scanf("%d",&m);
     int alloc[n][m];
     for (i = 0; i < n; i++){
-        printf("Enter allocated resource per process : ");
+        printf("Enter allocated resource for process %d : \n", i+1);
         for (j = 0; j < m; j++){
             printf("Enter %d resources : ",j+1);
             scanf("%d",&alloc[i][j]);
         }
     }
     for (i = 0; i < n; i++){
-        printf("Enter allocated resource per process : ");
+        printf("\n");
         for (j = 0; j < m; j++){
-            printf("Enter %d resources : ",alloc[i][j]);
+            printf("%d\t",alloc[i][j]);
         }
     }
     return (0);
