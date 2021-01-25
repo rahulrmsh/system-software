@@ -70,7 +70,10 @@ int main(){
             };
         }
         if(i < n){i++;}
-        else{i = 0;}           
+        else{i = 0;}   
+        if(index == n -1){
+            break;
+        }        
 
     }
     for(i = 0; i< n;i++){
