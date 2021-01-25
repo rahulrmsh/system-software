@@ -34,7 +34,6 @@ void think(int x){
 }
 int main(){
     initialize();
-    printf("%d",state[0]);
     while(1){
         printf("| Choose from below : \n|1. Start Eating\n|2. Stop Eating\n|3. Exit\n| Enter Response : ");
         scanf("%d", &n);
@@ -42,6 +41,7 @@ int main(){
             exit(0);
         }else if (n > 3){
             printf("|\n| WRONG INPUT\n|\n");
+            continue;
         }
         printf("| Enter philosopher id : ");
         scanf("%d", &key);
