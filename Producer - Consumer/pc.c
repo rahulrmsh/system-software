@@ -23,7 +23,7 @@ void produce(){
 void consume(){
     full = wait(full);
     s = wait(s);
-    printf("\nConsumer consumed 1 item, remaining : %d\n", y);
+    printf("\nConsumer consumed 1 item, total consumption : %d\n", y);
     y = (y + 1) % 5;
     s = signal(s);
     empty = signal(empty);
@@ -32,7 +32,7 @@ int main(){
     while (1)
     {
         printf("\n1.Produce \n2.Consume \n3.Exit\n");
-        printf("\nEnter choice");
+        printf("\nEnter choice : ");
         scanf("%d", &op);
         if (op == 1)
         {
@@ -40,7 +40,7 @@ int main(){
                 produce();
             else
             {
-                printf("\nBuffer is full");
+                printf("\nBuffer is full\n");
             }
         }
         else if (op == 2)
@@ -49,7 +49,7 @@ int main(){
                 consume();
             else
             {
-                printf("\nBuffer is empty");
+                printf("\nBuffer is empty\n");
             }
         }
         else if (op == 3)
