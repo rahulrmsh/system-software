@@ -17,12 +17,7 @@ int main(){
         }
         printf("\n");
     }
-    for (i = 0; i < n; i++){
-        printf("\n");
-        for (j = 0; j < m; j++){
-            printf("%d\t",alloc[i][j]);
-        }
-    }
+    
     printf("\n");
     for (i = 0; i < n; i++){
         printf("Enter maximum resource for process %d : \n", i+1);
@@ -33,7 +28,10 @@ int main(){
         printf("\n");
     }
     for (i = 0; i < n; i++){
-        printf("\n");
+        printf("Allocated\t\t\tMaximum\t\t\t");
+        for (j = 0; j < m; j++){
+            printf("%d\t",alloc[i][j]);
+        }
         for (j = 0; j < m; j++){
             printf("%d\t",max[i][j]);
         }
