@@ -23,9 +23,10 @@ void produce(){
 void consume(int a){
     full = wait(full);
     s = wait(s);
-    printf('Consumer consumed item : %d', y);
+    printf("Consumer consumed item : %d", y);
     y = (y - 1) % 5;
-    
+    s = signal(s);
+    empty = signal(empty);
 }
 int main(){
 }
