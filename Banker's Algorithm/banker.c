@@ -38,5 +38,6 @@ int main(){
             printf("%d\t",max[i][j]);
         }
     }
+    printf("\n");
     return (0);
 }
