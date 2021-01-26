@@ -16,17 +16,19 @@ int main() {
 
   for (i = 0; i < n; i++) {
     turn[i] = 0;
-    waiting[n] = 0;
-    for (j = 0; j < i; j++) {
+    
+    for (j = 0; j <= i; j++) {
 
       turn[i] += burst[j];
+      
     }
-    printf("%d\n",turn[i]);
-    // average = average + burst[i];
+    waiting[i] = 0;
+    for(j = 0; j < i; j++) {
+        waiting[i] += burst[j];
+    }
   }
+  printf("Process\tBurst\tWaiting\tTurn");
   for (i = 0; i < n; i++) {
-      printf("%d\n",turn[i]);
+      printf("%d\t%d\t%d\t%d",i+1,burst[i], waiting[i], turn[i]);
   }
-//   printf("Average %d", average / n);
-//   printf("Average %d", average / n);
 }
