@@ -1,1 +1,1 @@
-# Producer-Consumer - C Language
+# Producer-Consumer - Python
