@@ -4,7 +4,8 @@
 #include <stdlib.h>
 int main() {
   int n, i, j;
-  scanf("Enter the number of processes  : %d", &n);
+  printf("Enter the number of processes  : ");
+  scanf("%d", &n);
   int burst[n], average, turn[n];
   for (i = 0; i < n; i++) {
     scanf("Enter the burst time of processes : %d", &j);
