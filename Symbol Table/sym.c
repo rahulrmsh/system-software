@@ -17,6 +17,7 @@ int find(int adr){
 void create(int adr,char label[20],int key){
     count = 0;
     flag = 0;
+    printf("%s",label);
     if(count < max){
         for(i=key;i<max;i++){
             if(a[i] == 0){
@@ -49,10 +50,26 @@ void create(int adr,char label[20],int key){
     }
 }
 
+void modify(int adr, char label[20]){
+    flag = 0;
+    for(i=0;i<max;i++){
+        if(s[i].adr == adr){
+            flag = 1;
+            printf("Found at location : %d", i+1);
+            strcpy(s[i].label, label);
+            printf("New value changed as : %s", label);
+            break;
+        }
+    }
+    if(flag == 0){
+        printf("Address not found. Try again.");
+    }
+}
+
 void display(){
-    printf("\nLocation\tAddress\tLabel\n");
+    printf("\nLocation \tAddress \tLabel\n");
         for(i=0;i<max;i++){
-            printf("%d\t%d\t%s",i+1,s[i].adr,s[i].label);
+            printf("%d\t\t%d\t\t%s\n",i+1,s[i].adr,s[i].label);
         }
        
 }
@@ -72,7 +89,7 @@ int main(){
             printf("Enter address : ");
             scanf("%d", &adr);
             printf("Enter label : ");
-            scanf("%s", &label[20]);
+            scanf("%s", label);
             key = find(adr);
             create(adr, label, key);
         }
@@ -80,7 +97,9 @@ int main(){
             
         }
         else if (res == 3) {}
-        else if (res == 4) {}
+        else if (res == 4) {
+            display();
+        }
         else if (res == 5) {
             exit(0);
         }
