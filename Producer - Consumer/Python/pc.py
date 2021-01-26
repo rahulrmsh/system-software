@@ -21,10 +21,10 @@ def produce():
 
 def signal():
     global empty, s, x, full
-    empty = wait(empty)
+    full = wait(full)
     s = wait(s)
-    x = (x + 1) % 5
     print("\nProducer produced item : {}\n".format(x))
+    x = (x + 1) % 5
     full = signal(full)
     s = signal(s)
 
