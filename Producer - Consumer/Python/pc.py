@@ -19,7 +19,7 @@ def produce():
     full = signal(full)
     s = signal(s)
 
-def signal():
+def consume():
     global empty, s, x, full
     full = wait(full)
     s = wait(s)
