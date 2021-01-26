@@ -19,7 +19,22 @@ void create(int adr,char label[20],int key){
     flag = 0;
     for(i=key;i<max;i++){
         if(a[i] == 0){
-            
+            flag = 1;
+            a[i] = 1;
+            s[i].adr = adr;
+            strcpy(s[i].label, label);
+            break;
+        }
+    }
+    if(flag == 0){
+        for(i=0;i<key;i++){
+            if(a[i] == 0){
+                flag = 1;
+                a[i] = 1;
+                s[i].adr = adr;
+                strcpy(s[i].label, label);
+                break;
+            }
         }
     }
 }
