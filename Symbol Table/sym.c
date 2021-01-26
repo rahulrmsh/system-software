@@ -18,6 +18,17 @@ int main(){
         strcpy(s[i].label, "");
     }
     while(1){
-        
+        printf("\n1.CREATE \n2.MODIFY \n3.SEARCH \n4.DISPLAY \n5.EXIT");
+        printf("\nEnter response : ");
+        scanf("%d", &res);
+        if (res == 1){}
+        else if (res == 2) {}
+        else if (res == 3) {}
+        else if (res == 4) {}
+        else if (res == 5) {}
+        else{
+            printf("\nWrong response. Try again");
+        }
+
     }
 }
