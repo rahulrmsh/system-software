@@ -17,7 +17,6 @@ int find(int adr){
 void create(int adr,char label[20],int key){
     count = 0;
     flag = 0;
-    printf("%s",label);
     if(count < max){
         for(i=key;i<max;i++){
             if(a[i] == 0){
