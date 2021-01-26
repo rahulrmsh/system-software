@@ -39,3 +39,5 @@ while(True):
     elif op == 2:
         if s > 0 and full != 0:
             consume()
+    elif op == 3:
+        exit(0)
