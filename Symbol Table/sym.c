@@ -54,9 +54,9 @@ void modify(int adr, char label[20]){
     for(i=0;i<max;i++){
         if(s[i].adr == adr){
             flag = 1;
-            printf("Found at location : %d", i+1);
+            printf("Found at location : %d\n", i+1);
             strcpy(s[i].label, label);
-            printf("New value changed as : %s", label);
+            printf("New value changed as : %s\n", label);
             break;
         }
     }
@@ -113,7 +113,11 @@ int main(){
             scanf("%s", label);
             modify(adr, label);
         }
-        else if (res == 3) {}
+        else if (res == 3) {
+            printf("Enter address : ");
+            scanf("%d", &adr);
+            search(adr);
+        }
         else if (res == 4) {
             display();
         }
