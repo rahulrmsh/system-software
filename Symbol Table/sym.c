@@ -7,10 +7,21 @@ struct Symbol{
     int adr;
     char label[20];
 }s[11];
-int max = 11, count = 0;
+int max = 11, count = 0, flag = 0;
 int a[11];
+
 int find(int adr){
     return(adr % max);
+}
+
+void create(int adr,char label[20],int key){
+    count = 0;
+    flag = 0;
+    for(i=0;i<max;i++){
+        a[i] = 0;
+        s[i].adr = 0;
+        strcpy(s[i].label, "");
+    }
 }
 int main(){
     int adr, res, i;
