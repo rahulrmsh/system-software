@@ -11,9 +11,13 @@ def signal(x):
     return ++x
 
 def produce():
-    global empty, s
+    global empty, s, x, full
     empty = wait(empty)
-    
+    s = wait(s)
+    x = (x + 1) % 5
+    print("\nProducer produced item : {}\n".format(x))
+    full = signal(full)
+    s = signal(s)
 
 
 while(True):
@@ -22,3 +26,5 @@ while(True):
     if op == 1:
         if s > 0 and empty != 0:
             produce()
+        else:
+            print()
