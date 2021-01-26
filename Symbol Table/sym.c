@@ -17,29 +17,39 @@ int find(int adr){
 void create(int adr,char label[20],int key){
     count = 0;
     flag = 0;
-    for(i=key;i<max;i++){
-        if(a[i] == 0){
-            flag = 1;
-            a[i] = 1;
-            s[i].adr = adr;
-            strcpy(s[i].label, label);
-            break;
-        }
-    }
-    if(flag == 0){
-        for(i=0;i<key;i++){
+    if(count < max){
+        for(i=key;i<max;i++){
             if(a[i] == 0){
                 flag = 1;
                 a[i] = 1;
                 s[i].adr = adr;
                 strcpy(s[i].label, label);
+                count++;
                 break;
             }
         }
+        if(flag == 0){
+            for(i=0;i<key;i++){
+                if(a[i] == 0){
+                    flag = 1;
+                    a[i] = 1;
+                    s[i].adr = adr;
+                    strcpy(s[i].label, label);
+                    count++;
+                    break;
+                }
+            }
+        }
+        if(flag == 1){
+            printf("\nValue Entered.");
+        }
+    }
+    else{
+        printf("\nBucket Full.");
     }
 }
 int main(){
-    int adr, res;
+    int adr, res, key;
     char label[20];
     for(i=0;i<max;i++){
         a[i] = 0;
@@ -51,7 +61,10 @@ int main(){
         printf("\nEnter response : ");
         scanf("%d", &res);
         if (res == 1){}
-        else if (res == 2) {}
+        else if (res == 2) {
+            key = find(adr);
+            create(adr, label,key);
+        }
         else if (res == 3) {}
         else if (res == 4) {}
         else if (res == 5) {}
