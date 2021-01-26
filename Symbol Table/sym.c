@@ -66,6 +66,20 @@ void modify(int adr, char label[20]){
     }
 }
 
+void search(int adr){
+    flag = 0;
+    for(i=0;i<max;i++){
+        if(s[i].adr == adr){
+            flag = 1;
+            printf("\nLocation \tAddress \tLabel\n");
+            printf("%d\t\t%d\t\t%s\n",i+1,s[i].adr,s[i].label);
+            break;
+        }
+    }
+    if(flag == 0){
+        printf("Address not found. Try again.");
+    }
+}
 void display(){
     printf("\nLocation \tAddress \tLabel\n");
         for(i=0;i<max;i++){
