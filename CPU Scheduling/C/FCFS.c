@@ -27,8 +27,15 @@ int main() {
         waiting[i] += burst[j];
     }
   }
-  printf("Process\tBurst\tWaiting\tTurn");
+  printf("Process\tBurst\tWaiting\tTurn\n");
   for (i = 0; i < n; i++) {
-      printf("%d\t%d\t%d\t%d",i+1,burst[i], waiting[i], turn[i]);
+      printf("%d\t%d\t%d\t%d\n",i+1,burst[i], waiting[i], turn[i]);
   }
+  float wait = 0.0, tSum = 0.0;
+  for (i = 0; i < n; i++) {
+      wait += waiting[i];
+      tSum += turn[i];
+  }
+  printf("Average waiting time : %f\n", wait/n);
+  printf("Average turn around time : %f\n", tSum/n);
 }
