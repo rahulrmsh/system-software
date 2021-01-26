@@ -43,6 +43,6 @@ while(True):
         if s == 1 and full != 0:
             empty, s, x, full = consume(empty, s, x, full)
         else:
-            print("\nBuffer is full\n")
+            print("\nBuffer is empty\n");
     elif op == 3:
         exit(0)
