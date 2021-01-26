@@ -9,6 +9,9 @@ struct Symbol{
 }s[11];
 int max = 11, count = 0;
 int a[11];
+int find(int adr){
+    return(adr % max);
+}
 int main(){
     int adr, res, i;
     char label[20];
