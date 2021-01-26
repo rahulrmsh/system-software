@@ -60,10 +60,16 @@ int main(){
         printf("\n1.CREATE \n2.MODIFY \n3.SEARCH \n4.DISPLAY \n5.EXIT");
         printf("\nEnter response : ");
         scanf("%d", &res);
-        if (res == 1){}
-        else if (res == 2) {
+        if (res == 1){
+            printf("Enter address : ");
+            scanf("%d", &adr);
+            printf("Enter label : ");
+            scanf("%s", &label[20]);
             key = find(adr);
-            create(adr, label,key);
+            create(adr, label, key);
+        }
+        else if (res == 2) {
+            
         }
         else if (res == 3) {}
         else if (res == 4) {}
