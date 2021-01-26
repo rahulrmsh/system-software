@@ -11,7 +11,7 @@ def signal(x):
 def produce(empty, s, x, full):
     empty = wait(empty)
     s = wait(s)
-    x = (x + 1) % 5
+    x = (x + 1) % 10
     print("\nProducer produced item : {}\n".format(x))
     full = signal(full)
     s = signal(s)
@@ -21,7 +21,7 @@ def consume(empty, s, y, full):
     full = wait(full)
     s = wait(s)
     print("\nConsumer consumed 1 item, total consumption : {}\n".format(y))
-    y = (y + 1) % 5
+    y = (y + 1) % 10
     empty = signal(empty)
     s = signal(s)
     return empty, s, x, full
@@ -29,8 +29,8 @@ def consume(empty, s, y, full):
 x = 0
 y = 1
 s = 1
-empty = 0
-full = 10
+empty = 10
+full = 4
 while(True):
     print("\n1.Produce \n2.Consume \n3.Exit\n")
     op = int(input("\nEnter choice : "))
