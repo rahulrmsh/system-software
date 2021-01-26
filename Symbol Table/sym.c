@@ -73,7 +73,9 @@ int main(){
         }
         else if (res == 3) {}
         else if (res == 4) {}
-        else if (res == 5) {}
+        else if (res == 5) {
+            exit(0);
+        }
         else{
             printf("\nWrong response. Try again");
         }
