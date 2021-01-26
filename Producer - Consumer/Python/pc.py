@@ -20,12 +20,12 @@ def produce():
     s = signal(s)
 
 def consume():
-    global empty, s, x, full
+    global empty, s, y, full
     full = wait(full)
     s = wait(s)
-    print("\nProducer produced item : {}\n".format(x))
-    x = (x + 1) % 5
-    full = signal(full)
+    print("\nConsumer consumed 1 item, total consumption : {}\n".format(y))
+    y = (y + 1) % 5
+    empty = signal(empty)
     s = signal(s)
 
 while(True):
