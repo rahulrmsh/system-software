@@ -27,7 +27,7 @@ int main() {
         waiting[i] += burst[j];
     }
   }
-  printf("Process\tBurst\tWaiting\tTurn\n");
+  printf("Process\tBurst\tWaiting\tTurn Around\n");
   for (i = 0; i < n; i++) {
       printf("%d\t%d\t%d\t%d\n",i+1,burst[i], waiting[i], turn[i]);
   }
