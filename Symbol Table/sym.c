@@ -7,7 +7,7 @@ struct Symbol{
     int adr;
     char label[20];
 }s[11];
-int max = 11, count = 0, flag = 0;
+int max = 11, count = 0, flag = 0, i;
 int a[11];
 
 int find(int adr){
@@ -17,14 +17,14 @@ int find(int adr){
 void create(int adr,char label[20],int key){
     count = 0;
     flag = 0;
-    for(i=0;i<max;i++){
-        a[i] = 0;
-        s[i].adr = 0;
-        strcpy(s[i].label, "");
+    for(i=key;i<max;i++){
+        if(a[i] == 0){
+            
+        }
     }
 }
 int main(){
-    int adr, res, i;
+    int adr, res;
     char label[20];
     for(i=0;i<max;i++){
         a[i] = 0;
