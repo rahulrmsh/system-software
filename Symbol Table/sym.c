@@ -48,6 +48,21 @@ void create(int adr,char label[20],int key){
         printf("\nBucket Full.");
     }
 }
+
+void display(){
+    printf("\nLocation\tAddress\tLabel\n");
+        for(i=key;i<max;i++){
+            if(a[i] == 0){
+                flag = 1;
+                a[i] = 1;
+                s[i].adr = adr;
+                strcpy(s[i].label, label);
+                count++;
+                break;
+            }
+        }
+       
+}
 int main(){
     int adr, res, key;
     char label[20];
