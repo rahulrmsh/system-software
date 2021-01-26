@@ -30,7 +30,7 @@ x = 0
 y = 1
 s = 1
 empty = 10
-full = 4
+full = 0
 while(True):
     print("\n1.Produce \n2.Consume \n3.Exit\n")
     op = int(input("\nEnter choice : "))
@@ -42,5 +42,7 @@ while(True):
     elif op == 2:
         if s == 1 and full != 0:
             empty, s, x, full = consume(empty, s, x, full)
+        else:
+            print("\nBuffer is full\n")
     elif op == 3:
         exit(0)
