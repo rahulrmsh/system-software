@@ -94,7 +94,11 @@ int main(){
             create(adr, label, key);
         }
         else if (res == 2) {
-            
+            printf("Enter address : ");
+            scanf("%d", &adr);
+            printf("Enter label : ");
+            scanf("%s", label);
+            modify(adr, label);
         }
         else if (res == 3) {}
         else if (res == 4) {
