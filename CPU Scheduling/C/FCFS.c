@@ -8,7 +8,8 @@ int main() {
   scanf("%d", &n);
   int burst[n], average, turn[n];
   for (i = 0; i < n; i++) {
-    scanf("Enter the burst time of processes : %d", &j);
+    printf("Enter the burst time of processes : "); 
+    scanf("%d", &j);
     burst[i] = j;
   }
   for (i = 0; i < n; i++) {
