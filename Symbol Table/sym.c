@@ -52,7 +52,7 @@ void create(int adr,char label[20],int key){
 void display(){
     printf("\nLocation\tAddress\tLabel\n");
         for(i=0;i<max;i++){
-
+            printf("%d\t%d\t%s",i+1,s[i].adr,s[i].label);
         }
        
 }
