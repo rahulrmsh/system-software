@@ -27,4 +27,7 @@ while(True):
         if s > 0 and empty != 0:
             produce()
         else:
-            print()
+            print("\nBuffer is full\n")
+    elif op == 2:
+        if s > 0 and full != 0:
+            consume()
