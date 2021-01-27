@@ -9,13 +9,14 @@ Let ‘n’ be the number of processes in the system and ‘m’ be the number o
 ## Available : 
 
 It is a 1-d array of size ‘m’ indicating the number of available resources of each type.
-```Available[ j ] = k ```
+``` Available[ j ] = k ``` 
 means there are ‘k’ instances of resource type Rj
 
 ## Max :
 
 It is a 2-d array of size ‘n*m’ that defines the maximum demand of each process in a system.
-Max[ i, j ] = k means process Pi may request at most ‘k’ instances of resource type Rj.
+``` Max[ i, j ] = k ```
+means process Pi may request at most ‘k’ instances of resource type Rj.
 
 ## Allocation :
 
